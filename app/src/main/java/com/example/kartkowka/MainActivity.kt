@@ -32,10 +32,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.dod).setOnClickListener {
-            var liczba1 = findViewById<TextView>(R.id.licz1).text
-            var liczba2 = findViewById<TextView>(R.id.licz2).text
+            var liczba1 = findViewById<TextView>(R.id.licz1).text.toString().toInt()
+            var liczba2 = findViewById<TextView>(R.id.licz2).text.toString().toInt()
             var wynik = liczba1 + liczba2
-            findViewById<TextView>(R.id.wysw).text = wynik
+            findViewById<TextView>(R.id.wysw).text = wynik.toString()
         }
 
         setSupportActionBar(binding.toolbar)
