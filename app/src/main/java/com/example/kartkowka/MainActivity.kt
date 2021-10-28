@@ -28,7 +28,14 @@ class MainActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.wysw).text = findViewById<TextView>(R.id.wpisz).text
         }
         findViewById<Button>(R.id.dol).setOnClickListener {
-            findViewById<TextView>(R.id.wysw).text = findViewById<TextView>(R.id.wysw).text + findViewById<TextView>(R.id.wpisz).text
+            findViewById<TextView>(R.id.wysw).text = findViewById<TextView>(R.id.wysw).text.toString() + findViewById<TextView>(R.id.wpisz).text.toString()
+        }
+
+        findViewById<Button>(R.id.dod).setOnClickListener {
+            var liczba1 = findViewById<TextView>(R.id.licz1).text
+            var liczba2 = findViewById<TextView>(R.id.licz2).text
+            var wynik = liczba1 + liczba2
+            findViewById<TextView>(R.id.wysw).text = wynik
         }
 
         setSupportActionBar(binding.toolbar)

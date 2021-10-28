@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
+    <TextView
+        android:id="@+id/licz2"
+        android:layout_width="118dp"
+        android:layout_height="36dp"
+        android:text="Wpisz liczbę:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.788"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.594" />
+
     <Button
         android:id="@+id/zas"
         android:layout_width="wrap_content"
@@ -35,7 +47,7 @@
         android:layout_width="174dp"
         android:layout_height="126dp"
         android:layout_marginTop="40dp"
-        android:text="TextView"
+        android:text="Tu będzie wynik"
         app:layout_constraintBottom_toTopOf="@+id/dol"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.848"
@@ -47,11 +59,35 @@
         android:id="@+id/wpisz"
         android:layout_width="128dp"
         android:layout_height="74dp"
-        android:text="TextView"
+        android:text="Wpisz tekst:"
         app:layout_constraintBottom_toTopOf="@+id/zas"
         app:layout_constraintEnd_toStartOf="@+id/wysw"
         app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.318" />
+
+    <Button
+        android:id="@+id/dod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dodaj"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812" />
+
+    <TextView
+        android:id="@+id/licz1"
+        android:layout_width="119dp"
+        android:layout_height="33dp"
+        android:text="Wpisz liczbę: "
+        app:layout_constraintBottom_toTopOf="@+id/dod"
+        app:layout_constraintEnd_toStartOf="@+id/licz2"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.794" />
 </androidx.constraintlayout.widget.ConstraintLayout>
