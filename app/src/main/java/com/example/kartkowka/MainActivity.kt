@@ -27,11 +27,15 @@ class MainActivity : AppCompatActivity() {
         var liczba1 = 0
         var liczba2 = 0
         var wynik = 0
+
         findViewById<Button>(R.id.zas).setOnClickListener {
-            findViewById<TextView>(R.id.wysw).text = findViewById<EditText>(R.id.wpisz).text
+            findViewById<TextView>(R.id.wysw).text =
+                findViewById<EditText>(R.id.wpisz).text
         }
         findViewById<Button>(R.id.dol).setOnClickListener {
-            findViewById<TextView>(R.id.wysw).text = findViewById<TextView>(R.id.wysw).text.toString() + findViewById<EditText>(R.id.wpisz).text.toString()
+            findViewById<TextView>(R.id.wysw).text =
+                findViewById<TextView>(R.id.wysw).text.toString() +
+                        findViewById<EditText>(R.id.wpisz).text.toString()
         }
 
         findViewById<Button>(R.id.dod).setOnClickListener {
