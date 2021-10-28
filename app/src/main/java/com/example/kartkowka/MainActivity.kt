@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import com.example.kartkowka.databinding.ActivityMainBinding
 
@@ -23,18 +24,20 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        var liczba1 = 0
+        var liczba2 = 0
+        var wynik = 0
         findViewById<Button>(R.id.zas).setOnClickListener {
-            findViewById<TextView>(R.id.wysw).text = findViewById<TextView>(R.id.wpisz).text
+            findViewById<TextView>(R.id.wysw).text = findViewById<EditText>(R.id.wpisz).text
         }
         findViewById<Button>(R.id.dol).setOnClickListener {
-            findViewById<TextView>(R.id.wysw).text = findViewById<TextView>(R.id.wysw).text.toString() + findViewById<TextView>(R.id.wpisz).text.toString()
+            findViewById<TextView>(R.id.wysw).text = findViewById<TextView>(R.id.wysw).text.toString() + findViewById<EditText>(R.id.wpisz).text.toString()
         }
 
         findViewById<Button>(R.id.dod).setOnClickListener {
-            var liczba1 = findViewById<TextView>(R.id.licz1).text.toString().toInt()
-            var liczba2 = findViewById<TextView>(R.id.licz2).text.toString().toInt()
-            var wynik = liczba1 + liczba2
+            liczba1 = findViewById<EditText>(R.id.licz1).text.toString().toInt()
+            liczba2 = findViewById<EditText>(R.id.licz2).text.toString().toInt()
+            wynik = liczba1 + liczba2
             findViewById<TextView>(R.id.wysw).text = wynik.toString()
         }
 
